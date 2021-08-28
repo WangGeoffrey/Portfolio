@@ -46,8 +46,9 @@ nav > div > h1 {
     transition: 0.2s;
 }
 
-.btn:hover {
-    background: #F5F5F5;
+.btn:hover, .btn:focus {
+    color: #00ffff;
+    border: 2px solid #00ffff;
 }
 
 .intro {
@@ -88,7 +89,8 @@ hr {
     transition: transform 0.5s ease;
 }
 
-.projects .project:hover {
+.projects .project:hover,
+.projects .project:focus {
     transform: scale(1.05);
 }
 
@@ -130,7 +132,8 @@ hr {
     transition: opacity 0.5s ease;
 }
 
-.projects .project:hover .blur {
+.projects .project:hover .blur,
+.projects .project:focus .blur {
     opacity: 1;
 }
 
@@ -146,7 +149,8 @@ hr {
     transition: opacity 0.5s ease;
 }
 
-.projects .project:hover .info {
+.projects .project:hover .info,
+.projects .project:focus .info {
     opacity: 1;
     transition-delay: 0.3s;
 }
@@ -192,7 +196,7 @@ footer .footer > p {
     color: #A9A9A9;
 }
 
-ul {
+.contact > ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -202,4 +206,14 @@ ul {
     text-decoration: none;
     margin: 5px;
     color: #A9A9A9;
+    transition: color 0.5s ease;
+}
+
+.contact > ul > li > a:hover,
+.contact > ul > li > a:focus {
+    color: #00ffff;
+}
+
+*,*:focus,*:hover{
+    outline:none;
 }
