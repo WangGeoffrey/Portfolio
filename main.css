@@ -102,6 +102,13 @@ hr {
     min-width: 100%;
     height: auto;
     border-bottom: 1px solid black;
+    transition: opacity 1s ease;
+}
+
+.pos {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .projects .project .content {
@@ -130,6 +137,7 @@ hr {
     backdrop-filter: blur(5px);
     opacity: 0;
     transition: opacity 0.5s ease;
+    z-index: 4;
 }
 
 .projects .project:hover .blur,
@@ -147,6 +155,7 @@ hr {
     padding-inline: 20px;
     opacity: 0;
     transition: opacity 0.5s ease;
+    z-index: 5;
 }
 
 .projects .project:hover .info,
