@@ -19,6 +19,7 @@ nav {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
     z-index: 2;
+    transition: transform 0.2s linear;
 }
 
 .btn {
