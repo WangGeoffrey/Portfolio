@@ -4,11 +4,31 @@ var index_2 = 0;
 var images_1 = document.getElementsByClassName("imgs_1");
 var images_2 = document.getElementsByClassName("imgs_2");
 
+var lastScrollTop = 0;
+var navActive = true;
+
 window.onload = function() {
   order(images_1);
   order(images_2);
   setTimeout(cycle_1, wait);
 }
+
+window.addEventListener("scroll", function () {
+  var st = window.pageYOffset || document.documentElement.scrollTop;
+  if (st > lastScrollTop) { //Down scroll
+    if (navActive) {
+      this.document.getElementsByTagName("nav")[0].style.transform = "translate(0, -100%)";
+      navActive = !navActive;
+    }
+  }
+  else { //Up scroll
+    this.document.getElementsByTagName("nav")[0].style.transform = "translate(0, 0)";
+    if (!navActive) {
+      navActive = !navActive;
+    }
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+}, false);
 
 function order(images) {
   var i;
